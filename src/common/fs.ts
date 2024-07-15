@@ -1,7 +1,7 @@
 import fs, { writeFileSync } from "fs";
 import path, { dirname } from "path";
 
-const BASE_PATH = path.join(__dirname,"..","..","data");
+const BASE_PATH = path.join(__dirname, "..", "..", "data");
 const DATA_FILENAME = "tasks.json";
 
 export function readData<t>(fileName: string = DATA_FILENAME): t {
@@ -9,7 +9,7 @@ export function readData<t>(fileName: string = DATA_FILENAME): t {
   return JSON.parse(fs.readFileSync(`${BASE_PATH}/${fileName}`, "utf8"));
 }
 
-export function writeData(relativePath: string, data: object): void {
+export function writeData<t>(data: t, relativePath: string = DATA_FILENAME): void {
   createDirectory(BASE_PATH);
   const dirPath = dirname(relativePath);
   createDirectory(dirPath);
