@@ -1,0 +1,23 @@
+{
+  "name": "todo-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "figlet": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.8",
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  }
+}
